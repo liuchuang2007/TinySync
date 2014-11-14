@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<confiuration>
+    
+        <!--  local directory  to  synchronize -->
+        <local_dir>D:/Work/pic/js</local_dir>
+ 
+         <!-- seconds to execute synchronize  -->
+        <timer>10</timer>
+        
+        <!--  server address -->
+        <remote_server>
+            <ip_addr> 127.0.0.1:8089</ip_addr>
+            <dir> 127.0.0.1:8289</dir>
+         </remote_server>
+         
+         <remote_server>
+               <ip_addr> 127.0.0.1:8089</ip_addr>
+               <dir> 127.0.0.1:8289</dir>
+            </remote_server>
+            
+            <remote_server>
+               <ip_addr> 127.0.0.1:8089</ip_addr>
+               <dir> 127.0.0.1:8289</dir>
+            </remote_server>
+</confiuration>
