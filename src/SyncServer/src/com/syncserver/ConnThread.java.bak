@@ -52,7 +52,7 @@ public class ConnThread extends Thread {
 							for(String filePath : fileArr) {
 								try {
 
-									// Sending file to client
+									// start send file to client
 									System.out.println(mInfo.mIpAddr + " "+ mDf.format(new Date()) + " Start:" + filePath);
 									if(sendFile(filePath.replaceAll("\\\\", "/"))) {
 										System.out.println(mInfo.mIpAddr + " "+ mDf.format(new Date()) + " End:" + filePath + "\n");
@@ -62,9 +62,8 @@ public class ConnThread extends Thread {
 									}
 								} catch (IOException e) {
 
-									// Sending data failed when client is gone.
-									mInfo.mSock.close();
-									System.out.println("Client [" + mInfo.mIpAddr + "] "+ " is gone.");
+									// When file is writing, sending will failed.
+									System.out.println(mInfo.mIpAddr + " "+ mDf.format(new Date()) + "Send file error:" + filePath + "\n");
 									break;
 								}
 							}

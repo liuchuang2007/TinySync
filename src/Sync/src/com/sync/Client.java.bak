@@ -150,13 +150,7 @@ public class Client {
 				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
-				try {
-					mSocket.close();
-					mSocket = null;
-				} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				//e1.printStackTrace();
-				}
+				e.printStackTrace();
 			}
 			
 			mInSync = false;
